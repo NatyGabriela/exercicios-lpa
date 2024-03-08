@@ -83,54 +83,54 @@ Route::get('dobro', function (Request $request) {
         $resultado;
 });
 
-Route::get('area ', function (Request $request){
+Route::get('area ', function (Request $request) {
     $base = $request->input('base');
     $altura = $request->input('altura');
-    $resultado = $base . $altura; 
+    $resultado = $base . $altura;
     return $resultado = $base * $altura;
-     });
+});
 
-     Route::get('desconto', function (Request $request){
-        $compra = $request->input('compra');
-        $desconto = $request->input('desconto');
-        $porcentagem = $compra /100;
-        $resultado = $compra - ($desconto * $porcentagem);
-        return $resultado;
-         });
+Route::get('desconto', function (Request $request) {
+    $compra = $request->input('compra');
+    $desconto = $request->input('desconto');
+    $porcentagem = $compra / 100;
+    $resultado = $compra - ($desconto * $porcentagem);
+    return $resultado;
+});
 
-         Route::get('aumento' , function (Request $request){
-            $salario = $request->input ('salario');
-            $aumento = $request->input ('aumento');
-            $porcentagem = $aumento / 100 *  $salario;
-            $resultado = $salario + $porcentagem;
-            return 'O salario anterior e de ' . $salario . 'O valor do aumento e de ' . $porcentagem . ' , o salario atual e de ' . $resultado;
-             });
+Route::get('aumento', function (Request $request) {
+    $salario = $request->input('salario');
+    $aumento = $request->input('aumento');
+    $porcentagem = $aumento / 100 *  $salario;
+    $resultado = $salario + $porcentagem;
+    return 'O salario anterior e de ' . $salario . 'O valor do aumento e de ' . $porcentagem . ' , o salario atual e de ' . $resultado;
+});
 
-             Route::get('salario ', function (Request $request){
-                $compra = $request->input('compra');
-                $resultado = $compra / 10;
-                return $resultado;
-                 });
+Route::get('salario ', function (Request $request) {
+    $compra = $request->input('compra');
+    $resultado = $compra / 10;
+    return $resultado;
+});
 
-                 Route::get('comissao ', function(Request $request){
-                    $valorvendas = $request->input('valor');
-                    $comissao = $request->input('comissao');
-                    $resultado = $valorvendas / $comissao;
-                    return $resultado;
-                 });
+Route::get('comissao ', function (Request $request) {
+    $valorvendas = $request->input('valor');
+    $comissao = $request->input('comissao');
+    $resultado = $valorvendas / $comissao;
+    return $resultado;
+});
 
-                 Route::get('dias', function(Request $request){
-                    $dias = $request->input('dias');
-                    $horas = $dias * 24; 
-                    $minutos = $horas * 60;
-                    $segundos = $minutos * 60;
-                    $resultado = $horas . $minutos . $segundos;
-                    return $resultado;
-                     });
+Route::get('dias', function (Request $request) {
+    $dias = $request->input('dias');
+    $horas = $dias * 24;
+    $minutos = $horas * 60;
+    $segundos = $minutos * 60;
+    $resultado = $horas . $minutos . $segundos;
+    return $resultado;
+});
 
-                     Route::get('produto', function(Request $request){
-                        $precoProduto = $request->input('Produto');
-                        $quantidade = $request->input('quantidade');
-                        $resultado = "valor total: " . $precoProduto * $quantidade;
-                        return $resultado;
-                         });
+Route::get('produto', function (Request $request) {
+    $precoProduto = $request->input('Produto');
+    $quantidade = $request->input('quantidade');
+    $resultado = "valor total: " . $precoProduto * $quantidade;
+    return $resultado;
+});
