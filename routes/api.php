@@ -105,3 +105,9 @@ Route::get('area ', function (Request $request){
             $resultado = $salario + $porcentagem;
             return 'O salario anterior e de ' . $salario . 'O valor do aumento e de ' . $porcentagem . ' , o salario atual e de ' . $resultado;
              });
+
+             Route::get('salario ', function (Request $request){
+                $compra = $request->input('compra');
+                $resultado = $compra / 10;
+                return $resultado;
+                 });
