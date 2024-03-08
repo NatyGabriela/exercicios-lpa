@@ -67,3 +67,13 @@ Route::get('nome/users', function (Request $request){
                                     return ' O resultado da media e'.
                                      $primeiraNota .' + ' . $segundaNota . ' + ' . $terceiraNota . ' + ' . $quartaNota . ' + '. $quintaNota . ' = '. $resultado/5;
                                      });
+
+                                     Route::get('divisao', function (Request $request){
+                                        $primeiroNumero = 20;
+                                        $segundoNumero = 10;
+                                        $resultado = $segundoNumero / $primeiroNumero;
+                                        return ' O resultado da divisao e ' . 
+                                        $segundoNumero . ' / ' . $primeiroNumero . ' = '. $resultado;
+                                         });                             
+
+
