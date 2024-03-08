@@ -74,6 +74,14 @@ Route::get('nome/users', function (Request $request){
                                         $resultado = $segundoNumero / $primeiroNumero;
                                         return ' O resultado da divisao e ' . 
                                         $segundoNumero . ' / ' . $primeiroNumero . ' = '. $resultado;
-                                         });                             
+                                         });  
+                                         
+                                         
+                                         Route::get('dobro', function (Request $request){
+                                            $primeiroNumero = 40;
+                                            $resultado = $primeiroNumero * 2;
+                                            return 'O dobro de 30 e igual ' . 
+                                            $resultado;
+                                         });                        
 
 
