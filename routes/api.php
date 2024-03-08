@@ -40,3 +40,11 @@ Route::get('nome/users', function (Request $request){
                 $primeiroNumero . ' - ' . $segundoNumero . ' - ' . $terceiroNumero . ' = ' . $resultado;
                         });
 
+                        Route::get('dividir', function (Request $request){
+                            $primeiroNumero = 60;
+                            $segundoNumero = 20;
+                            $resultado=$primeiroNumero/$segundoNumero;
+                            return 'O resultado da divisao é'. 
+                            $primeiroNumero . ' / ' . $segundoNumero . ' = ' . $resultado;
+                            });
+
