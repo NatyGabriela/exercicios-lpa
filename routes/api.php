@@ -118,3 +118,12 @@ Route::get('area ', function (Request $request){
                     $resultado = $valorvendas / $comissao;
                     return $resultado;
                  });
+
+                 Route::get('dias', function(Request $request){
+                    $dias = $request->input('dias');
+                    $horas = $dias * 24; 
+                    $minutos = $horas * 60;
+                    $segundos = $minutos * 60;
+                    $resultado = $horas . $minutos . $segundos;
+                    return $resultado;
+                     });
