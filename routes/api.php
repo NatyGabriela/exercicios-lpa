@@ -111,3 +111,10 @@ Route::get('area ', function (Request $request){
                 $resultado = $compra / 10;
                 return $resultado;
                  });
+
+                 Route::get('comissao ', function(Request $request){
+                    $valorvendas = $request->input('valor');
+                    $comissao = $request->input('comissao');
+                    $resultado = $valorvendas / $comissao;
+                    return $resultado;
+                 });
