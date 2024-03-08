@@ -54,5 +54,16 @@ Route::get('nome/users', function (Request $request){
                                 $resultado = $primeiroNumero*$segundoNumero;
                                 return ' O resultado da multiplicacao é'. 
                                 $primeiroNumero . ' * ' . $segundoNumero . ' = ' . $resultado;
-                                 });                         
-
+                                 }); 
+                                 
+                                 
+                                 Route::get('media', function (Request $request){
+                                    $primeiraNota = 7;
+                                    $segundaNota = 3;
+                                    $terceiraNota = 5;
+                                    $quartaNota = 2;
+                                    $quintaNota = 8;
+                                    $resultado= $primeiraNota + $segundaNota + $terceiraNota + $quartaNota + $quintaNota;
+                                    return ' O resultado da media e'.
+                                     $primeiraNota .' + ' . $segundaNota . ' + ' . $terceiraNota . ' + ' . $quartaNota . ' + '. $quintaNota . ' = '. $resultado/5;
+                                     });
