@@ -21,3 +21,13 @@ Route::get('nome/users', function (Request $request){
             return "meu nome é" . $nome . "nasci no ano de " .  "na cidade de" . $cidade;     
         });
 
+        Route::get('somar', function(Request $request){
+            $primeiroNumero = 20;
+            $segundoNumero = 10;
+    
+            $resultado = $primeiroNumero + $segundoNumero;
+            return 'O resultado da soma dos numeros é '.
+            $primeiroNumero . ' + '. $segundoNumero .   ' = '. $resultado;
+    
+            });
+
