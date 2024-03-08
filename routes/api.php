@@ -48,3 +48,11 @@ Route::get('nome/users', function (Request $request){
                             $primeiroNumero . ' / ' . $segundoNumero . ' = ' . $resultado;
                             });
 
+                            Route::get('multiplicacao' , function (Request $request){
+                                $primeiroNumero = 10;
+                                $segundoNumero = 5;
+                                $resultado = $primeiroNumero*$segundoNumero;
+                                return ' O resultado da multiplicacao é'. 
+                                $primeiroNumero . ' * ' . $segundoNumero . ' = ' . $resultado;
+                                 });                         
+
