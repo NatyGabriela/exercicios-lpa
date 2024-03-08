@@ -127,3 +127,10 @@ Route::get('area ', function (Request $request){
                     $resultado = $horas . $minutos . $segundos;
                     return $resultado;
                      });
+
+                     Route::get('produto', function(Request $request){
+                        $precoProduto = $request->input('Produto');
+                        $quantidade = $request->input('quantidade');
+                        $resultado = "valor total: " . $precoProduto * $quantidade;
+                        return $resultado;
+                         });
