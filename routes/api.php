@@ -31,3 +31,12 @@ Route::get('nome/users', function (Request $request){
     
             });
 
+            Route::get('subtrair', function(Request $request){
+                $primeiroNumero = 20;
+                $segundoNumero = 10;
+                $terceiroNumero = 30;
+                $resultado = $primeiroNumero - $segundoNumero - $terceiroNumero; 
+                return 'O resultado da subtracao dos numeros é: ' . 
+                $primeiroNumero . ' - ' . $segundoNumero . ' - ' . $terceiroNumero . ' = ' . $resultado;
+                        });
+
