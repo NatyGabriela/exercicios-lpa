@@ -4,26 +4,26 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('nome/users', function (Request $request) {
-    $nome = 'naty';
+    $nome = $request->input('naty');
     return $nome;
 });
 
 Route::get('nome/idade', function (Request $request) {
-    $nome = 'naty';
-    $idade = '16';
+    $nome = $request->input('nome');
+    $idade = $request->input('idade');
     return "meu nome é" . $nome . " ,tenho" . $idade . "anos de idade";
 });
 
 Route::get('nome/cidade', function (Request $request) {
-    $nome = "naty";
-    $ano = "2007";
-    $cidade = "Presidente Epitácio";
+    $nome = $request->input('nome');
+    $ano = $request->input('ano');
+    $cidade = $request->input('cidade');
     return "meu nome é" . $nome . "nasci no ano de " .  "na cidade de" . $cidade;
 });
 
 Route::get('somar', function (Request $request) {
-    $primeiroNumero = 20;
-    $segundoNumero = 10;
+    $primeiroNumero =$request->input('primeiroNumero');
+    $segundoNumero = $request->input('segundoNumero');
 
     $resultado = $primeiroNumero + $segundoNumero;
     return 'O resultado da soma dos numeros é ' .
@@ -31,25 +31,25 @@ Route::get('somar', function (Request $request) {
 });
 
 Route::get('subtrair', function (Request $request) {
-    $primeiroNumero = 20;
-    $segundoNumero = 10;
-    $terceiroNumero = 30;
+    $primeiroNumero =$request->input>('primeiroNumero');
+    $segundoNumero = $request->input('segundoNumero');
+    $terceiroNumero = $request->input('terceiroNumero');
     $resultado = $primeiroNumero - $segundoNumero - $terceiroNumero;
     return 'O resultado da subtracao dos numeros é: ' .
         $primeiroNumero . ' - ' . $segundoNumero . ' - ' . $terceiroNumero . ' = ' . $resultado;
 });
 
 Route::get('dividir', function (Request $request) {
-    $primeiroNumero = 60;
-    $segundoNumero = 20;
+    $primeiroNumero =$request->input('primeiroNumero');
+    $segundoNumero =$request->input('seundoNumero');
     $resultado = $primeiroNumero / $segundoNumero;
     return 'O resultado da divisao é' .
         $primeiroNumero . ' / ' . $segundoNumero . ' = ' . $resultado;
 });
 
 Route::get('multiplicacao', function (Request $request) {
-    $primeiroNumero = 10;
-    $segundoNumero = 5;
+    $primeiroNumero = $request->input('primeiroNumero');
+    $segundoNumero =$request->input('segundoNumero');
     $resultado = $primeiroNumero * $segundoNumero;
     return ' O resultado da multiplicacao é' .
         $primeiroNumero . ' * ' . $segundoNumero . ' = ' . $resultado;
@@ -57,19 +57,19 @@ Route::get('multiplicacao', function (Request $request) {
 
 
 Route::get('media', function (Request $request) {
-    $primeiraNota = 7;
-    $segundaNota = 3;
-    $terceiraNota = 5;
-    $quartaNota = 2;
-    $quintaNota = 8;
+    $primeiraNota = $request->input('primeiraNota');
+    $segundaNota =$request->input('segundaNota');
+    $terceiraNota = $request->input('terceiraNota');
+    $quartaNota = $request->input('quartaNota');
+    $quintaNota = $request->input('quintaNota');
     $resultado = $primeiraNota + $segundaNota + $terceiraNota + $quartaNota + $quintaNota;
     return ' O resultado da media e' .
         $primeiraNota . ' + ' . $segundaNota . ' + ' . $terceiraNota . ' + ' . $quartaNota . ' + ' . $quintaNota . ' = ' . $resultado / 5;
 });
 
 Route::get('divisao', function (Request $request) {
-    $primeiroNumero = 20;
-    $segundoNumero = 10;
+    $primeiroNumero = $request->input('primeiroNumero');
+    $segundoNumero = $request->input('segundoNumero');
     $resultado = $segundoNumero / $primeiroNumero;
     return ' O resultado da divisao e ' .
         $segundoNumero . ' / ' . $primeiroNumero . ' = ' . $resultado;
@@ -77,7 +77,7 @@ Route::get('divisao', function (Request $request) {
 
 
 Route::get('dobro', function (Request $request) {
-    $primeiroNumero = 40;
+    $primeiroNumero = $request->input('primeiroNumero');
     $resultado = $primeiroNumero * 2;
     return 'O dobro de 30 e igual ' .
         $resultado;
