@@ -15,25 +15,25 @@ Certifique-se de ter os seguintes requisitos atendidos antes de começar a traba
 ## Como utilizar este repositório
 
 1. Clone este repositório para seu ambiente de desenvolvimento local utilizando o comando: 
-ˋˋˋ 
+```
 git clone https://github.com/NatyGabriela/exercicios-lpa.git
-ˋˋˋ 
+``` 
 2. Acesse o diretório do projeto:
-ˋˋˋ 
+```
 cd exercícios-lpa
-ˋˋˋ 
+``` 
 3. Iniciando o projeto 
-ˋˋˋ
+```
 composer update
-ˋˋˋ
+```
 4. Iniciando o servidor
- ˋˋˋ
+ ```
  php artisan serve --port=80
-ˋˋˋ
+```
  5. Acessar o Visual Studio Code
- ˋˋˋ
+ ```
  code .
-  ˋˋˋ
+  ```
   6. Importar o arquivo do Insomnia
   
   ## Licença 
