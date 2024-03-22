@@ -213,6 +213,127 @@ Route::get('divisao/tres', function (Request $request){
     }
 });
 
+Route::get('questao 6' , function(Request $request){
+$numero =$request->input('numero');
+$resto = ($numero %9);
+    if($resto ==0){
+        return 'numero e divisivel';
+    }else{
+        return 'numero nao e divisivel';
+    }
+});
 
+Route::get('questao 9', function (Request $request){
+$idade =$request->input('numero');
+if ($idade = 12){
+return 'voce e uma crianca';
+}else{
+    return 'voce e maior que crianca';
+}
+
+});
+
+Route::get('questao 10', function (Request $request){
+$numero =$request->input('numero');
+if ($numero){
+    return 'este numero e positivo';
+}else{
+    return 'este numero e impar';
+}
+
+});
+
+Route::get('divisivel/seis', function (Request $request){
+$numero =$request->input('numero');
+$resto =($numero %6);
+if($resto ==0){
+    return 'numero e divisivel';
+}else{
+    return 'numero nao e divisivel';
+}
+});
+
+Route::get('usuario/nome', function (Request $request){
+$nome =$request->input('nome');
+if ($nome ){
+    return 'nome e alice';
+}else{
+    return 'ola alice';
+}
+});
+
+Route::get('nome/idade', function (Request $request){
+$nome =$request->input('nome');
+$idade =$request->input('idade');
+if($idade >=18){
+    return 'voce e maior de idade';
+}else{
+    return 'maior igual de idade';
+}
+
+
+});
+
+Route::get('questao 14', function (Request $request){
+$idade=$request->input('idade');
+$carteira=$request->input('carteira');
+if ($idade >=18 . $carteira = "sim"){
+    return 'voce pode dirigir';
+} else if ($idade < 18 . $carteira ="nao"){
+    return 'voce nao pode dirigir';
+}
+});
+
+Route::get('questao 13', function (Request $request){
+$numero1=$request->input('numero1');
+$numero2=$request->input('numero2');
+if ($numero1 < $numero2){
+    return 'numero e menor que ' . $numero1;
+} else if ($numero2 < $numero1){
+    return 'numero e menor que ' . $numero2;
+} else {
+    return 'eles sao iguais';
+}
+
+});
+
+Route::get('questao 8', function (Request $request){
+$numero=$request->input('numero');
+$resto=($numero %7);
+if ($resto ==0){
+    return 'numero e divisivel';
+}else{
+    return 'numero nao e divisivel';
+}
+});
+
+Route::get('questao 11', function (Request $request){
+$numero=$request->input('numero');
+if ($numero >100){
+    return 'numero e maior ';
+}else if ($numero <100){
+    return "numero e menor ";
+}
+});
+
+Route::get('questao 20', function (Request $request){
+$numero1=$request->input('numero1');
+$numero2=$request->input('numero2');
+$resultado=($numero1 + $numero2);
+if ($resultado / 2 == 0 . $numero1 * $numero2){
+    return ' este numero e par';
+}
+});
+
+Route::get('questao 19', function (Request $request){
+$numero1=$request->input('numero1');
+$numero2=$request->input('numero2');
+$resultado = ($numero1 * $numero2);
+if ($resultado > 100){
+    return 'o resultado  e maior que cem';
+} else{
+return 'o resultado e menor que cem';
+}
+});
 
 
