@@ -135,7 +135,7 @@ Route::get('produto', function (Request $request) {
     return $resultado;
 });
 
-Route::get('verifica/idade', function(Request $request){
+Route::get('questao 3', function(Request $request){
 $idade = $request->input('idade');
 
 if($idade > 18){
@@ -145,7 +145,7 @@ if($idade > 18){
 }
 });
 
-Route::get('verificar/par', function(Request $request){
+Route::get('questao 4', function(Request $request){
 $numero = $request->input('numero');
 
 if($numero % 2 == 0){
@@ -156,7 +156,7 @@ if($numero % 2 == 0){
 
 });
 
-Route::get('verificar/numero', function (Request $request){
+Route::get('questao 1', function (Request $request){
 $numero = $request->input('numero');
 
 if($numero >= 10){
@@ -167,7 +167,7 @@ if($numero >= 10){
 }
 });
 
-Route::get('temperatura', function (Request $request){
+Route::get('questao 7', function (Request $request){
 $temperatura = $request->input('numero');
 
 if($temperatura >= 30){
@@ -177,7 +177,7 @@ if($temperatura >= 30){
 }
 });
 
-Route::get('positivo/negativo', function (Request $request){
+Route::get('questao 2', function (Request $request){
 $numero = $request->input('numero');
 if ($numero >0){
     return 'este numero e positivo';
@@ -190,7 +190,7 @@ if ($numero >0){
 }
 });
 
-Route::get('maior/numero', function (Request $request){
+Route::get('questao 5', function (Request $request){
 $numero1 = $request->input('numero1');
 $numero2 = $request->input('numero 2');
 if ('$numero1 > $numero2'){
@@ -243,7 +243,7 @@ if ($numero){
 
 });
 
-Route::get('divisivel/seis', function (Request $request){
+Route::get('questao 12', function (Request $request){
 $numero =$request->input('numero');
 $resto =($numero %6);
 if($resto ==0){
@@ -253,7 +253,7 @@ if($resto ==0){
 }
 });
 
-Route::get('usuario/nome', function (Request $request){
+Route::get('questao 13', function (Request $request){
 $nome =$request->input('nome');
 if ($nome ){
     return 'nome e alice';
@@ -262,7 +262,7 @@ if ($nome ){
 }
 });
 
-Route::get('nome/idade', function (Request $request){
+Route::get('questao 17', function (Request $request){
 $nome =$request->input('nome');
 $idade =$request->input('idade');
 if($idade >=18){
@@ -284,7 +284,7 @@ if ($idade >=18 . $carteira = "sim"){
 }
 });
 
-Route::get('questao 13', function (Request $request){
+Route::get('questao 15', function (Request $request){
 $numero1=$request->input('numero1');
 $numero2=$request->input('numero2');
 if ($numero1 < $numero2){
@@ -320,20 +320,47 @@ Route::get('questao 20', function (Request $request){
 $numero1=$request->input('numero1');
 $numero2=$request->input('numero2');
 $resultado=($numero1 + $numero2);
-if ($resultado / 2 == 0 . $numero1 * $numero2){
-    return ' este numero e par';
-}
+if ($resultado % 2 == 0){
+    $multiplica =$numero1 * $numero2;
+    return $numero1 . "x" . $numero2 . "=" . $multiplica;
+}else{
+    $dividir = $numero1 % $numero2;
+    return $numero1 . "/" . $numero2 . "=" . $dividir;
+};
 });
 
 Route::get('questao 19', function (Request $request){
 $numero1=$request->input('numero1');
 $numero2=$request->input('numero2');
 $resultado = ($numero1 * $numero2);
-if ($resultado > 100){
+if ($resultado > 100) {
     return 'o resultado  e maior que cem';
 } else{
 return 'o resultado e menor que cem';
 }
 });
 
+Route::get('questao 18', function (Request $request){
+$numero1=$request->input('numero1');
+$numero2=$request->input('numero2');
+if ($numero1 == 0 ){
+    return "nao e possivel efetuar a divisao pois o numero e zero";
+}else if ($numero2  == 0) {
+return "nao e possivel efetuar a divisao pois o segundo e zero";
+} else {
+    $resultado = $numero1 / $numero2;
+    return $numero1 . "/" . $numero2 . "=" . $resultado;
+};
+});
 
+Route::get('questao 16', function (Request $request){
+    $numero1=$request->input('numero1');
+    $numero2=$request->input('numero2');
+    if ($numero1 > $numero2){
+        return "o numero menor e" . $numero1;
+    }else if ($numero2 < $numero1){
+        return "o numero menor e " . $numero2;
+    }else{
+        return "eles sao iguais";
+    }
+});
