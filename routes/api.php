@@ -354,7 +354,8 @@ return "nao e possivel efetuar a divisao pois o segundo e zero";
 });
 
 Route::get('questao 16', function (Request $request){
-    $numero1=$request->input('numero1');
+    $numero1=$resultado = $numero1 / $numero2;
+    return $numero1 . "/" . $numero2 . "=" . $resultado;
     $numero2=$request->input('numero2');
     if ($numero1 > $numero2){
         return "o numero menor e" . $numero1;
@@ -364,3 +365,56 @@ Route::get('questao 16', function (Request $request){
         return "eles sao iguais";
     }
 });
+
+Route::get('lista6/1' , function (Request $request){
+    $nota1=$request->input('nota1');
+    $nota2=$request->input('nota2');
+    $nota3=$request->input('nota3');
+    $r1 = ($nota1 + $nota2 + $nota3) / 3;
+    if ($r1 >= 7){
+        return "aluno foi aprovado";
+    }else{
+        return "aluno nao foi aprovado";
+    }
+});
+
+Route::get('lista6/2', function (Request $request){
+$salario = $request->input('salario');
+
+if ($salario <=1900){   
+    return "voce e isento de imposto";
+}
+if ($salario >= 1901){
+ if ($salario <= 2800);
+ return "o valor a ser pago e de R$" . ($salario * 7) / 100;   
+}
+if ($salario >= 2801){
+    if ($salario <= 3700);
+    return "o valor a ser pago e de R$" . ($salario * 15) / 100;
+}
+if ($salario >=3701){
+    return "o valor a ser pago e de R$" . ($salario * 22) / 100;
+}
+});
+
+Route::get('lista6/3', function(Request $request){
+$ano= $request->input('ano');
+if ($ano % 4 == 0){
+    return "o ano e bissexto";
+}else{
+    return "o ano nao e bissexto";
+}
+});
+
+Route::get('lista6/4', function (Request $request){
+$valor=$request->input('valor');
+$desconto=$valor * 15;
+$resultado=$desconto / 100;
+$r2 = $valor - $resultado;
+if ($valor >= 1000){
+    return "o valor a ser pago e " . $r2;
+}else{
+    return "o valor nao se encaixa no desconto ";
+}
+});
+
